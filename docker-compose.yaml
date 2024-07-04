@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  grlc:
+    container_name: grlc
+    hostname: grlc 
+    build: .
+    ports:
+      - 9050:80
+    networks:
+      - dataverse
+
+networks:
+  dataverse:
+    external: true
